@@ -42,6 +42,6 @@ const myDom = React.createElement("div", { id: "grandParent" }, [
 ]);
 
 console.log(myDom);
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementsByClassName("root")[0]);
 root.render(myDom);
 //   ReactDOM.render(heading, document.getElementById("root"));
