@@ -1,0 +1,23 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "React Practice through namaste react by Akshay Saini",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viplav-kumar/namaste-react.git"
+  },
+  "keywords": [],
+  "author": "Viplav Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viplav-kumar/namaste-react/issues"
+  },
+  "homepage": "https://github.com/viplav-kumar/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  }
+}
