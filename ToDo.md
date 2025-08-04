@@ -1,13 +1,13 @@
 # 📝 Project TODO List
 
-## 📅 Week of: 31 July 2025
+## 📅 Week of: 2nd Aug 2025
 
 ---
 
 ## ✅ Today's Tasks
 
 - [ ] Complete Namaste React 3rd episode along with code practice and notes making.
-- [ ]
+- [ ] Practice all React Hooks in online React Compiler with examples.
 
 ---
 
