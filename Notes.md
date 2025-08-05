@@ -112,4 +112,11 @@
 
 - JSX also prevents cross site scripting attacks. Whenever we use '{}' curly braces to load any piece of javascript within our component, so JSX sanitizes the data before using it in the webpage to prevent any malicious script from loading and executing. Let's say we are using any javascript data within our component and lets say this data is being fetched from an API, and attackers passes any piece of JS code in response, so if JSX does not sanitizes the data before it being used so we might expose local storage, session storage, cookies any many other important information about our system which can lead to security lapse and we an fall prey to cyber attacks.
 
+- React Project Based Learning: Creating food ordering app.
+  Planning of Layout/Design/Mockup: The first and foremost important thing, do not directly jump into writing code.
+  - Components of food ordering app:
+    - Header: Logo, Navigation Menu Items(Location, Search Restaurant), Profile, Cart.
+    - Body: Food Option Selector, Brand Options Selector, Restaurant Container(Restaurant Card).
+    - Footer: Logo, Copyright, Links, About, Address, Contacts, Social Links, Country and Language Selection, App
+
 ---

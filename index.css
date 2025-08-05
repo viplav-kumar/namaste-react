@@ -1,14 +1,79 @@
-#grandParent {
-    background-color: rgb(84, 87, 87);
-    border: 3px solid black;
-    border-radius: 5px;
-    color: black;
-    text-align: center;
+.res-app {
+  height: 100%;
+  width: 100%;
 }
 
-#parent1, #parent2 {
-    background-color: rgb(183, 190, 188);
-    color: black;
-    border-radius: 5px;
-    margin: 0px 20px;
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid lightgrey;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header > .appLogo {
+  display: flex;
+}
+
+.header > .profileImage {
+  margin-right: 50px;
+}
+
+.header > .cartImage {
+  margin-right: -50px;
+}
+
+.header > .profileImage > img,
+.header > .cartImage > img {
+  padding: 15px;
+}
+
+.header > .appLogo > img {
+  height: 75px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.header > .appLogo > h3 {
+  padding-left: 3px;
+  font-size: xx-large;
+  font-family: cursive;
+  margin-top: 15px;
+}
+
+.navigationMenuItems {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigationMenuItems > .userLocation,
+.navigationMenuItems > .searchRestaurant {
+  padding: 15px;
+}
+
+.userLocation > input,
+.searchRestaurant > input {
+  height: 40px;
+  width: 250px;
+  border-radius: 8px;
+  padding-left: 35px;
+  font-family: system-ui;
+  font-size: medium;
+  background-image: url("https://endlessicons.com/wp-content/uploads/2015/08/search-icon-2-614x460.png");
+  background-repeat: no-repeat;
+  background-size: 35px 30px;
+  background-position: 0px center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.profileImage > img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.cartImage > img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
 }
