@@ -186,7 +186,7 @@ const TrendingFoodTypeCascader = () => {
 
   const scroll = (direction) => {
     const { current } = scrollRef;
-    const scrollAmount = 120; // Scroll by one image width
+    const scrollAmount = 480;
     current.scrollBy({
       left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",

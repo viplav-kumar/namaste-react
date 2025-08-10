@@ -114,9 +114,25 @@
 
 - React Project Based Learning: Creating food ordering app.
   Planning of Layout/Design/Mockup: The first and foremost important thing, do not directly jump into writing code.
+
   - Components of food ordering app:
     - Header: Logo, Navigation Menu Items(Location, Search Restaurant), Profile, Cart.
-    - Body: Food Option Selector, Brand Options Selector, Restaurant Container(Restaurant Card).
+    - Body: Welcome Image, Trending Food Type Selector, Famous Food Brand Selector, Filters and Sorting Bar, Restaurant Container(Restaurant Card).
     - Footer: Logo, Copyright, Links, About, Address, Contacts, Social Links, Country and Language Selection, App
 
 ---
+
+- **Props**: Props (short for properties) are read-only data (object type) that you pass from a parent component to a child component. They are function arguments for your component because component at the end of the day is JS functions in functional components. So, passing "props" to a component is just like passing arguments to a function. **Props solves a fundamental UI need**: data reusability and flexibility. Without props: You’d hardcode values inside components (making them rigid), you’d need multiple versions of the same component for different data. **With props**: Components become reusable & dynamic. The same button, card, or table component can handle different text, styles, or behavior just by changing props. **Problems props solves are**: Avoids duplication — one component can serve multiple purposes, Keeps UI consistent — same base component with different data. Makes code maintainable — changes in one component propagate everywhere it’s used. Improves scalability — big apps need flexible components. **Limitations of Props**: Props are one-way: Parent → Child only. A child cannot directly update a parent’s state via props (because props are read-only). In deeply nested components, passing props down multiple layers becomes prop drilling (messy and hard to maintain). **Better Alternatives**: When props become messy (especially with prop drilling), you can use - Context API: Shares data globally without passing props manually at every level. Good for theme, authentication state, language settings, etc. | State Management Libraries (Redux, Zustand, Jotai, Recoil): Best when your app has a lot of shared data across unrelated components. Adds features like middleware, async state, and debugging tools. | Event Callbacks (Child → Parent Communication): Instead of updating props, a child can call a function passed from the parent to request changes. Hence props are perfect for local, simple data passing from parent → child but avoid for large-scale state sharing across multiple deep components — use Context or state libraries instead and also Keep props minimal — too many props make components hard to use.
+
+- Config driven UI: The UI which is driven by config or data and this data comes from backend api response.
+  Based on certain data our UI or parts of UI gets loaded or different UI or part of UI is loaded for different data.
+
+- Why should we give **"key"** attribute/property to each element while rendering a list, why it is necessary or helpful, what problem it solves and what if we dont use this "key" property/attribute?
+
+---
+
+In React, when you render a list of elements using .map() (or similar), you must give each element a special prop called "key". This "key" helps React identify which items in the list have changed, been added, or removed between renders. React uses a process called Reconciliation: When state/props change, React re-renders the component, instead of re-rendering the entire DOM, React compares the virtual DOM (old vs. new), and if an item’s key is the same between renders, React reuses that DOM element instead of recreating it but without keys React guesses based on index/position in the array, which can cause unnecessary re-renders or bugs (especially if the order changes). Using "key" helps in performance boost due to fewer DOM updates and prevents bugs because component state inside list items stays with the correct element. Without unique keys, React’s diffing algorithm can misinterpret changes which can lead to wrong UI updates. And we should not use "Index" as key because using index as keys is safe to use only when list is static (never reordered, filtered, or modified) and also no local state is stored inside list items otherwise inserting/removing items can shift indexes which can lead to keys change and then React destroys and recreates DOM nodes which can also cause flickers or loss of state hence we should use a unique, stable identifier (like id from the database).
+
+-
+
+- ***
