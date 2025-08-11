@@ -28,14 +28,13 @@
 }
 
 .appLogo > img {
-  height: 75px;
-  width: 80px;
+  height: 60px;
   border-radius: 50%;
 }
 
 .appLogo > h3 {
   padding-left: 3px;
-  font-size: xx-large;
+  font-size: x-large;
   font-family: cursive;
   margin-top: 15px;
 }
@@ -135,7 +134,7 @@
 }
 
 .welcomeComponent > .appLogo > img {
-  height: 45px;
+  height: 40px;
   width: 40px;
   border-radius: 50%;
 }

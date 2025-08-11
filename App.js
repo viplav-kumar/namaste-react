@@ -46,7 +46,7 @@ import ReactDOM from "react-dom/client";
 const Header = () => {
   return (
     <div className="header">
-      <AppLogo />
+      <AppLogo src="/images/AppLogo.png" />
       <NavigationMenuItems />
       <div className="cartImage">
         <img
@@ -64,13 +64,10 @@ const Header = () => {
   );
 };
 
-const AppLogo = () => {
+const AppLogo = (props) => {
   return (
     <div className="appLogo">
-      <img
-        alt="App Logo"
-        src="https://images.websiteplanet.com/wp-content/uploads/2020/08/9-Best-Z-Logos-and-How-to-Make-Your-Own-for-Free-image1.png"
-      ></img>
+      <img alt="App Logo" src={props.src}></img>
       <h3>ingry</h3>
     </div>
   );
@@ -108,7 +105,7 @@ const WelcomeComponent = () => {
         alt="Welcome Image"
         src="https://img.freepik.com/premium-vector/fast-food-background-realistic-style_98292-41700.jpg"
       ></img>
-      <AppLogo />
+      <AppLogo src="/images/AppLogoReverse.png" />
       <div className="welcomeMessage">Hungry? Order Now</div>
     </div>
   );
