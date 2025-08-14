@@ -7,7 +7,7 @@ import RestaurantContainer from "./RestaurantContainer";
 const Body = () => {
   return (
     <div className="body">
-      <WelcomeBanner />
+      {/* <WelcomeBanner /> */}
       <ImageCascader
         images={FoodTypeImages}
         cascaderTitle="Inspiration for your first order"

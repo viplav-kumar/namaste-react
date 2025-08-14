@@ -25,7 +25,11 @@ const ImageCascader = ({ images, cascaderTitle }) => {
             <div className="image-item" key={item.id ? item.id : index}>
               <img src={item.src} alt={item.label} className="carousel-image" />
               <div className="image-label">{item.label}</div>
-              <div className="image-label">{item.deliveryTime}</div>
+              {item.deliveryTime ? (
+                <div className="image-label2">{item.deliveryTime}</div>
+              ) : (
+                <></>
+              )}
             </div>
           ))}
         </div>
