@@ -12,7 +12,7 @@ Header:
   - Cart
 Body:
 ----
-  - Welcome Image
+  - Welcome Image (Optional)
   - Trending Food Type Selector
   - Famous Food brand Selector
   - Filters and Sorting Bar
@@ -31,26 +31,19 @@ Footer:
   - Country & Language Selection
   - App Download Links
 
-
-
-
-  <TrendingFoodTypeCascader />
-  <FamousFoodBrandCascader />
-  <FiltersAndSortingBar />
-  <RestaurantContainer />
 */
 
 import ReactDOM from "react-dom/client";
-import Header from "./components/Header";
+import MyHeader from "./components/MyHeader";
 import Body from "./components/Body";
-import Footer from "./components/Footer";
+import MyFooter from "./components/MyFooter";
 
 const AppLayout = () => {
   return (
     <div className="res-app">
-      <Header />
+      <MyHeader />
       <Body />
-      <Footer />
+      <MyFooter />
     </div>
   );
 };

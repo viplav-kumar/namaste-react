@@ -1,6 +1,6 @@
-const NavigationMenuItems = () => {
+const HeaderSearchBar = () => {
   return (
-    <div className="navigationMenuItems">
+    <section className="navigationMenuItems">
       <div className="userLocation">
         <input
           type="text"
@@ -10,8 +10,8 @@ const NavigationMenuItems = () => {
       <div className="searchRestaurant">
         <input type="text" placeholder="Search for restaurant and food"></input>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default NavigationMenuItems;
+export default HeaderSearchBar;

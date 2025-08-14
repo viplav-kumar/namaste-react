@@ -1,20 +1,20 @@
 import AppLogo from "./AppLogo";
-import NavigationMenuItems from "./NavigationMenuItems";
+import HeaderSearchBar from "./HeaderSearchBar";
 import { SHOPPING_CART_IMAGE, PROFILE_ICON } from "../utils/constants";
 
-const Header = () => {
+const MyHeader = () => {
   return (
-    <div className="header">
+    <header className="header">
       <AppLogo src="../../images/AppLogo.png" />
-      <NavigationMenuItems />
+      <HeaderSearchBar />
       <div className="cartImage">
         <img alt="App Cart Image" src={SHOPPING_CART_IMAGE}></img>
       </div>
       <div className="profileImage">
         <img alt="App Profile Image" src={PROFILE_ICON}></img>
       </div>
-    </div>
+    </header>
   );
 };
 
-export default Header;
+export default MyHeader;

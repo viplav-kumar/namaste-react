@@ -232,14 +232,13 @@
 
 .scroll-btn {
   position: absolute;
-  top: 50%;
   transform: translateY(-50%);
-  background: linear-gradient(135deg, #ff9800, #f57c00);
-  color: white;
+  background: #ffffff;
+  color: #000000;
   border: none;
-  padding: 12px 14px;
+  padding: 12px;
   border-radius: 50%;
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s ease, box-shadow 0.3s ease;
@@ -394,4 +393,12 @@
   .res-card {
     width: 100%;
   }
+}
+
+.footer {
+  background: rgb(248, 248, 248);
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
 }

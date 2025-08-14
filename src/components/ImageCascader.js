@@ -22,7 +22,7 @@ const ImageCascader = ({ images, cascaderTitle }) => {
 
         <div className="image-track" ref={scrollRef}>
           {images.map((item, index) => (
-            <div className="image-item" key={item.id ? item.id : index}>
+            <nav className="image-item" key={item.id ? item.id : index}>
               <img src={item.src} alt={item.label} className="carousel-image" />
               <div className="image-label">{item.label}</div>
               {item.deliveryTime ? (
@@ -30,7 +30,7 @@ const ImageCascader = ({ images, cascaderTitle }) => {
               ) : (
                 <></>
               )}
-            </div>
+            </nav>
           ))}
         </div>
 

@@ -6,7 +6,7 @@ import RestaurantContainer from "./RestaurantContainer";
 
 const Body = () => {
   return (
-    <div className="body">
+    <main className="body">
       {/* <WelcomeBanner /> */}
       <ImageCascader
         images={FoodTypeImages}
@@ -17,7 +17,7 @@ const Body = () => {
         cascaderTitle="Top brands for you"
       />
       <RestaurantContainer />
-    </div>
+    </main>
   );
 };
 
