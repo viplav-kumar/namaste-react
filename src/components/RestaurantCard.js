@@ -1,31 +1,43 @@
 const RestaurantCard = ({ restaurantData }) => {
-  const {
-    name,
-    image_url,
-    rating,
-    amountForOne,
-    cuisine,
-    deliveryTime,
-    discount,
-  } = restaurantData.basicDetails;
+  // const {
+  //   name,
+  //   image_url,
+  //   rating,
+  //   amountForOne,
+  //   cuisines,
+  //   deliveryTime,
+  //   discount,
+  // } = restaurantData.basicDetails;
+
+  const resInfo = {
+    name: restaurantData.name,
+    image_url:
+      "https://media-assets.swiggy.com/swiggy/image/upload/" +
+      restaurantData.cloudinaryImageId,
+    rating: restaurantData.avgRatingString,
+    amountForOne: restaurantData.costForTwo,
+    cuisines: restaurantData.cuisines,
+    deliveryTime: restaurantData.sla.slaString,
+    discount: restaurantData.aggregatedDiscountInfoV3.subHeader,
+  };
   return (
     <div className="res-card">
-      <img alt={name} src={image_url}></img>
+      <img alt={resInfo.name} src={resInfo.image_url}></img>
       <div className="res-name-rating">
-        <p className="res-name">{name}</p>
+        <p className="res-name">{resInfo.name}</p>
         <div className="res-rating">
-          <p>{rating}&nbsp;⭐</p>
+          <p>{resInfo.rating}&nbsp;⭐</p>
         </div>
       </div>
       <div className="res-cuisines-amountforOne">
-        <p className="res-cuisines" data-fulltext={cuisine.join(", ")}>
-          {cuisine.join(", ")}
+        <p className="res-cuisines" data-fulltext={resInfo.cuisines.join(", ")}>
+          {resInfo.cuisines.join(", ")}
         </p>
-        <p className="res-amountforOne">{amountForOne}</p>
+        <p className="res-amountforOne">{resInfo.amountForOne}</p>
       </div>
       <div className="res-discount-deliveryTime">
-        <p className="res-discount">{discount}</p>
-        <p className="res-deliveryTime">{deliveryTime}</p>
+        <p className="res-discount">{resInfo.discount}</p>
+        <p className="res-deliveryTime">{resInfo.deliveryTime}</p>
       </div>
     </div>
   );

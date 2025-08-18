@@ -1,12 +1,15 @@
 # 📝 Project TODO List
 
-## 📅 Week of: 2nd Aug 2025
+## 📅 Week of: 18th Aug 2025
 
 ---
 
 ## ✅ Today's Tasks
 
-- [ ] Complete Namaste React 3rd episode along with code practice and notes making.
+- [ ] Complete Namaste React 7th episode along with code practice and notes making.
+- [ ] Practice useState, useEffect Hook by making an API call to swiggy endpoints for getting restaurant data.
+- [ ] Implement Shimmer UI to be shown before actual data recieved from successful API call.
+- [ ] Improve your project by implementing/developing some other components like search and filter and start making it dynamic.
 - [ ] Practice all React Hooks in online React Compiler with examples.
 
 ---
