@@ -10,15 +10,22 @@ const RestaurantCard = ({ restaurantData }) => {
   // } = restaurantData.basicDetails;
 
   const resInfo = {
-    name: restaurantData.name,
-    image_url:
-      "https://media-assets.swiggy.com/swiggy/image/upload/" +
-      restaurantData.cloudinaryImageId,
-    rating: restaurantData.avgRatingString,
-    amountForOne: restaurantData.costForTwo,
-    cuisines: restaurantData.cuisines,
-    deliveryTime: restaurantData.sla.slaString,
-    discount: restaurantData.aggregatedDiscountInfoV3.subHeader,
+    name: restaurantData.name ? restaurantData.name : "",
+    image_url: restaurantData.cloudinaryImageId
+      ? "https://media-assets.swiggy.com/swiggy/image/upload/" +
+        restaurantData.cloudinaryImageId
+      : "",
+    rating: restaurantData.avgRatingString
+      ? restaurantData.avgRatingString
+      : "",
+    amountForOne: restaurantData.costForTwo ? restaurantData.costForTwo : "",
+    cuisines: restaurantData.cuisines.length ? restaurantData.cuisines : [],
+    deliveryTime: restaurantData.sla?.slaString
+      ? restaurantData.sla?.slaString
+      : "",
+    discount: restaurantData.aggregatedDiscountInfoV3?.subHeader
+      ? restaurantData.aggregatedDiscountInfoV3?.subHeader
+      : "",
   };
   return (
     <div className="res-card">

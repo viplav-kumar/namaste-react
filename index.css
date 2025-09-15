@@ -484,7 +484,7 @@
 .top-rated-res-btn {
   cursor: pointer;
   width: 17%;
-  margin: 10px 0;
+  margin: 10px 0 30px 0;
   padding: 10px;
   color: rgba(2, 6, 12, 0.75);
   font-size: 0.9rem;
@@ -501,6 +501,46 @@
 }
 
 .top-rated-res-btn:hover {
+  color: black;
+  border-color: #000000;
+  background-color: rgb(240, 240, 245);
+}
+
+.res-search-filter {
+  display: flex;
+  gap: 20px;
+}
+
+.search-food-restaurants-input {
+  margin: 10px 10px 30px 0;
+  padding: 10px;
+  border-radius: 8px;
+  width: 200px;
+  color: #02060cbf;
+  background-color: #fff;
+  border: 1px solid #02060c26;
+}
+
+.search-food-restaurants-input:hover {
+  color: black;
+  border-color: #000000;
+  background-color: rgb(240, 240, 245);
+}
+
+.search-food-restaurants-btn {
+  cursor: pointer;
+  color: #02060cbf;
+  background-color: #fff;
+  border: 1px solid #02060c26;
+  border-radius: 18px;
+  width: 80px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.search-food-restaurants-btn:hover {
   color: black;
   border-color: #000000;
   background-color: rgb(240, 240, 245);
