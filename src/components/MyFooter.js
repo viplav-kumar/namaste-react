@@ -1,4 +1,5 @@
 import AppLogo from "./AppLogo";
+import { Link } from "react-router-dom";
 
 const MyFooter = () => {
   return (
@@ -12,7 +13,7 @@ const MyFooter = () => {
         <p>About Zingry</p>
         <ul>
           <li>
-            <a>Who we are</a>
+            <Link to="/about">Who we are</Link>
           </li>
           <li>
             <a>Blog</a>
@@ -33,7 +34,7 @@ const MyFooter = () => {
         <p>Contact Us</p>
         <ul>
           <li>
-            <a>Help & Support</a>
+            <Link to="/contact">Help & Support</Link>
           </li>
           <li>
             <a>Partner with us</a>

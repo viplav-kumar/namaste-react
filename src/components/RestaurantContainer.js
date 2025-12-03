@@ -21,9 +21,22 @@ const RestaurantContainer = () => {
       return;
     } else if (response.ok) {
       const jsonResponse = await response.json();
-      const restaurantInfo =
-        jsonResponse?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants;
+      let restaurantInfo = [];
+      if (
+        jsonResponse?.data?.cards[1].card?.card?.gridElements?.infoWithStyle
+          ?.restaurants?.length
+      ) {
+        restaurantInfo =
+          jsonResponse?.data?.cards[1].card?.card?.gridElements?.infoWithStyle
+            ?.restaurants;
+      } else if (
+        jsonResponse?.data?.cards[4].card?.card?.gridElements?.infoWithStyle
+          ?.restaurants?.length
+      ) {
+        restaurantInfo =
+          jsonResponse?.data?.cards[4].card?.card?.gridElements?.infoWithStyle
+            ?.restaurants;
+      }
       setRestaurantData(restaurantInfo);
       setFilteredRestaurantData(restaurantInfo);
     } else {
@@ -94,11 +107,15 @@ const RestaurantContainer = () => {
           Top Rated Restaurants
         </button>
       </div>
-      <section className="res-container-cards">
-        {filteredRestaurantData.map((res) => (
-          <RestaurantCard restaurantData={res.info} key={res.info.id} />
-        ))}
-      </section>
+      {filteredRestaurantData.length ? (
+        <section className="res-container-cards">
+          {filteredRestaurantData.map((res) => (
+            <RestaurantCard restaurantData={res.info} key={res.info.id} />
+          ))}
+        </section>
+      ) : (
+        <p>No restaurants available at the moment.</p>
+      )}
     </div>
   );
 };

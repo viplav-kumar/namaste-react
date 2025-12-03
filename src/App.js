@@ -1,52 +1,42 @@
-/* 
-Component Structure:
--------------------
-Header:
------- 
-  - Logo
-  - Navigation Menu Items:
-    ---------------------
-      - Location
-      - Search Restaurant
-  - Profile
-  - Cart
-Body:
-----
-  - Welcome Image (Optional)
-  - Trending Food Type Selector
-  - Famous Food brand Selector
-  - Filters and Sorting Bar
-  - Restaurant Container:
-    --------------------
-      - Restaurant Card
-Footer:
-------
-  - Logo
-  - Copyright
-  - Links
-  - About
-  - Address
-  - Contacts
-  - Social Media Links
-  - Country & Language Selection
-  - App Download Links
-
-*/
-
 import ReactDOM from "react-dom/client";
 import MyHeader from "./components/MyHeader";
 import Body from "./components/Body";
 import MyFooter from "./components/MyFooter";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Error from "./components/Error";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 const AppLayout = () => {
   return (
     <div className="res-app">
       <MyHeader />
-      <Body />
+      <Outlet />
       <MyFooter />
     </div>
   );
 };
 
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
+    errorElement: <Error />,
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+root.render(<RouterProvider router={appRouter} />);
