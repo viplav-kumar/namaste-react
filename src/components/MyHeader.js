@@ -1,13 +1,13 @@
 import AppLogo from "./AppLogo";
 import HeaderSearchBar from "./HeaderSearchBar";
-import { SHOPPING_CART_IMAGE, PROFILE_ICON } from "../utils/constants";
 import { useState, useEffect } from "react";
 
 const MyHeader = () => {
-  console.log("Header Component Rendered");
+  const SHOPPING_CART_IMAGE = process.env.SHOPPING_CART_IMAGE;
+  const PROFILE_ICON = process.env.PROFILE_ICON;
   const [loginLogoutText, setLoginLogoutText] = useState("Login");
   useEffect(() => {
-    console.log("useEffect Hook Called");
+    // console.log("useEffect Hook Called");
   }, []);
 
   const handleLoginLogoutOperation = () => {

@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
-import { RestaurantList } from "../utils/mockData";
+import RestaurantCardShimmer from "./RestaurantCardShimmer";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const RestaurantContainer = () => {
   const [restaurantData, setRestaurantData] = useState([]);
@@ -8,18 +9,16 @@ const RestaurantContainer = () => {
   const [topRatedRestaurantSelected, setTopRatedRestaurantSelected] =
     useState(false);
   const [serachQuery, setSerachQuery] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  const restaurantListAPI = process.env.SWIGGY_RESTAURANT_LIST_API;
   useEffect(() => {
     fetchRestaurantData();
   }, []);
 
   const fetchRestaurantData = async () => {
-    const response = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6139&lng=77.2090&page_type=DESKTOP_WEB_LISTING"
-    );
-    if (!response.ok) {
-      console.log("API Failed");
-      return;
-    } else if (response.ok) {
+    try {
+      const response = await fetch(restaurantListAPI);
       const jsonResponse = await response.json();
       let restaurantInfo = [];
       if (
@@ -39,8 +38,10 @@ const RestaurantContainer = () => {
       }
       setRestaurantData(restaurantInfo);
       setFilteredRestaurantData(restaurantInfo);
-    } else {
-      console.log("Failed to get restaurants data");
+    } catch (error) {
+      console.log(error || "Something went wrong.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -107,10 +108,20 @@ const RestaurantContainer = () => {
           Top Rated Restaurants
         </button>
       </div>
-      {filteredRestaurantData.length ? (
+      {isLoading ? (
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "60px" }}>
+          {Array(6)
+            .fill("")
+            .map((_, i) => (
+              <RestaurantCardShimmer key={i} />
+            ))}
+        </div>
+      ) : filteredRestaurantData.length ? (
         <section className="res-container-cards">
           {filteredRestaurantData.map((res) => (
-            <RestaurantCard restaurantData={res.info} key={res.info.id} />
+            <Link key={res.info.id} to={"/restaurant/" + res.info.id}>
+              <RestaurantCard restaurantData={res.info} />
+            </Link>
           ))}
         </section>
       ) : (

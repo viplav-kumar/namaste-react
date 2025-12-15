@@ -1,19 +1,15 @@
 # 📝 Project TODO List
 
-## 📅 Week of: 21st Sept. 2025
+## 📅 Date: 15th DEC. 2025
 
 ---
 
 ## ✅ Today's Tasks
 
-- [ ] Complete Namaste React 7th episode along with code practice and notes making.
-- [ ] Practice useState, useEffect Hook.
-- [ ] Implement Shimmer UI to be shown before actual data recieved from successful API call.
-- [ ] Learn, understand and practice routing using react-router.
-- [ ] Improve your project by implementing/developing its different pages like contact page, about us page etc using client side routing.
+- [ ] Complete Namaste React 8th episode along with code practice and notes making.
+- [ ] Practice useState, useEffect Hook, class based component lifecycle methods, componentDidMount use.
 - [ ] Practice all React Hooks in online React Compiler with examples.
-
----
+- [ ] Implement React Query or TanStack Query for API calling.
 
 ## 💡 Daily Learning/Improvement
 

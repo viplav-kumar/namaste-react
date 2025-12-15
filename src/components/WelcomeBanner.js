@@ -1,7 +1,7 @@
 import AppLogo from "./AppLogo";
-import { WELCOME_BANNER_IMAGE } from "../utils/constants";
 
 const WelcomeBanner = () => {
+  const WELCOME_BANNER_IMAGE = process.env.WELCOME_BANNER_IMAGE;
   return (
     <div className="welcomeComponent">
       <img alt="Welcome Image" src={WELCOME_BANNER_IMAGE}></img>
