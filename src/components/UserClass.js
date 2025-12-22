@@ -3,39 +3,32 @@ import React from "react";
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      count: 0,
-      count1: 1,
-    };
-    console.log(this.props.id + " Child Constructor");
+    this.state = {};
+    // console.log(this.props.id + " Child Constructor");
   }
 
   componentDidMount() {
-    console.log(this.props.id + " Child componentDidMount");
+    // console.log(this.props.id + " Child componentDidMount");
+    // this.myInterval = setInterval(() => {
+    //   console.log("Namastey React");
+    // }, 1000);
+  }
+
+  componentWillUnmount() {
+    // console.log("Component Will Unmount");
+    // clearInterval(this.myInterval);
   }
 
   render() {
-    console.log(this.props.id + " Child Render");
-    const { name, email, mobileNo, address } = this.props;
-    const { count, count1 } = this.state;
+    // console.log(this.props.id + " Child Render");
+    const { id, name, location, avatarURL } = this.props;
     return (
       <div className="myCard">
         <h3>My Class Component</h3>
+        <img src={avatarURL}></img>
+        <p>Id: {id}</p>
         <p>Name: {name}</p>
-        <p>Email Id: {email}</p>
-        <p>Mobile No: {mobileNo}</p>
-        <p>Address: {address}</p>
-        <p>Count: {count}</p>
-        <button
-          onClick={() =>
-            this.setState((prevState) => ({
-              count: prevState.count + 1,
-            }))
-          }
-        >
-          Increase Count
-        </button>
-        <p>Count1: {count1}</p>
+        <p>Location: {location}</p>
       </div>
     );
   }

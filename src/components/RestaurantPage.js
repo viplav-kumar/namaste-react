@@ -10,6 +10,14 @@ const RestaurantPage = () => {
   const restaurantAPI = process.env.SWIGGY_RESTAURANT_API;
   useEffect(() => {
     fetchRestaurantData();
+    const myInterval = setInterval(() => {
+      console.log("Restaurant Page Mount");
+    }, 1000);
+
+    return () => {
+      console.log("Restaurant Page Unmount");
+      clearInterval(myInterval);
+    };
   }, []);
 
   const fetchRestaurantData = async () => {

@@ -1282,7 +1282,12 @@
 /* Class Component Styling */
 
 .myCard {
-  height: 350px;
+  height: 300px;
   border: 1px solid #000000;
   padding: 10px;
+}
+
+.myCard > img {
+  height: 100px;
+  border-radius: 50%;
 }

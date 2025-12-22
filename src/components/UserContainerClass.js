@@ -4,31 +4,39 @@ import UserClass from "./UserClass";
 class UserContainerClass extends Component {
   constructor(props) {
     super(props);
-    console.log("Parent Constructor");
+    // console.log("Parent Constructor");
+    this.state = {
+      userInfo: {
+        avatar_url: process.env.PROFILE_ICON,
+        id: "default",
+        name: "default",
+        location: "default",
+      },
+    };
   }
 
-  componentDidMount() {
-    console.log("Parent componentDidMount");
+  async componentDidMount() {
+    // console.log("Parent componentDidMount");
+    const response = await fetch("https://api.github.com/users/viplav-kumar");
+    const data = await response.json();
+    // console.log(data);
+    this.setState({
+      userInfo: data,
+    });
   }
 
   render() {
-    console.log("Parent Render");
+    // console.log("Parent Render");
+    const { id, name, location, avatar_url } = this.state.userInfo;
+    // debugger;
     return (
       <div>
         <h2>User Data</h2>
         <UserClass
-          id="1"
-          name="Viplav"
-          email="thakurviplav88@gmail.com"
-          mobileNo="8750238949"
-          address="Pune, Hinjewadi"
-        />
-        <UserClass
-          id="2"
-          name="Vicky"
-          email="viplavthakur6297@gmail.com"
-          mobileNo="8968345048"
-          address="Noida, Uttar Pradesh"
+          id={id}
+          name={name}
+          location={location}
+          avatarURL={avatar_url}
         />
       </div>
     );
