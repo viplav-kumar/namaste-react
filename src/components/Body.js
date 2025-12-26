@@ -2,7 +2,7 @@ import ImageCascader from "./ImageCascader";
 import { FoodTypeImages } from "../utils/mockData";
 import { FoodBrandImages } from "../utils/mockData";
 import RestaurantContainer from "./RestaurantContainer";
-import UserContainerClass from "./UserContainerClass";
+// import UserContainerClass from "./UserContainerClass";
 
 const Body = () => {
   return (
@@ -16,7 +16,7 @@ const Body = () => {
         cascaderTitle="Top brands for you"
       />
       <RestaurantContainer />
-      <UserContainerClass />
+      {/* <UserContainerClass /> */}
     </main>
   );
 };

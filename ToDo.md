@@ -6,7 +6,10 @@
 
 ## ✅ Today's Tasks
 
-- [ ] Complete Namaste React 9th episode along with code practice and notes making.
+- [ ] Learn and practice custom hooks, implement single responsibility principle by abstracting fetching data logic, try implementing and reusing custom hooks in your app, implement lazy loading with suspense and try distributing major independent functionalities into smaller chunks (dynamic loading/on-demand loading using dynamic imports/import function).
+- [ ] Install, configure and start using tailwind css and postcss, install tailwind vs code extension (Tailwind intellisense).
+- [ ] Learn and go through different css library like scss/sass, tailwind css + postcss, component library and framework like MUI (Material UI), Bootstrap, Ant Design, Styled components, Chakra UI etc.
+- [ ] Learn and practice implementing higher order component, lifting up state, controlled and uncontrolled components, props drilling, context api.
 - [ ] Learn and practice other hooks like useContext, useReducer, useMemo, useCallback & useRef Hook.
 - [ ] Learn and practice class based component lifecycle methods like constructor, render, componentDidMount, componentDidUpdate & componentWillUnmount working and its use.
 - [ ] Implement Dynamic Routes for different Restaurant Page.

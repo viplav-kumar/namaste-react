@@ -6,24 +6,24 @@ const RestaurantPage = () => {
   const [restaurantInfo, setRestaurantInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const { resId } = useParams();
-
   const restaurantAPI = process.env.SWIGGY_RESTAURANT_API;
+
   useEffect(() => {
     fetchRestaurantData();
-    const myInterval = setInterval(() => {
-      console.log("Restaurant Page Mount");
-    }, 1000);
+    // const myInterval = setInterval(() => {
+    //   console.log("Restaurant Page Mount");
+    // }, 1000);
 
-    return () => {
-      console.log("Restaurant Page Unmount");
-      clearInterval(myInterval);
-    };
+    // return () => {
+    //   console.log("Restaurant Page Unmount");
+    //   clearInterval(myInterval);
+    // };
   }, []);
 
   const fetchRestaurantData = async () => {
     try {
       const data = await fetch(restaurantAPI + resId);
-      const restaurantData = await data?.json();
+      const restaurantData = data.status === 200 ? await data.json() : null;
       console.log(restaurantData);
       setRestaurantInfo(restaurantData);
     } catch (error) {
