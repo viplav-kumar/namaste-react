@@ -11,7 +11,7 @@ const RestaurantContainer = () => {
   const [serachQuery, setSerachQuery] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
-  const restaurantListAPI = process.env.SWIGGY_RESTAURANT_LIST_API;
+  const restaurantListAPI = process.env.RESTAURANT_LIST_API;
   useEffect(() => {
     fetchRestaurantData();
   }, []);
@@ -19,23 +19,7 @@ const RestaurantContainer = () => {
   const fetchRestaurantData = async () => {
     try {
       const response = await fetch(restaurantListAPI);
-      const jsonResponse = await response.json();
-      let restaurantInfo = [];
-      if (
-        jsonResponse?.data?.cards[1].card?.card?.gridElements?.infoWithStyle
-          ?.restaurants?.length
-      ) {
-        restaurantInfo =
-          jsonResponse?.data?.cards[1].card?.card?.gridElements?.infoWithStyle
-            ?.restaurants;
-      } else if (
-        jsonResponse?.data?.cards[4].card?.card?.gridElements?.infoWithStyle
-          ?.restaurants?.length
-      ) {
-        restaurantInfo =
-          jsonResponse?.data?.cards[4].card?.card?.gridElements?.infoWithStyle
-            ?.restaurants;
-      }
+      const restaurantInfo = await response.json();
       setRestaurantData(restaurantInfo);
       setFilteredRestaurantData(restaurantInfo);
     } catch (error) {
@@ -48,7 +32,7 @@ const RestaurantContainer = () => {
   const getTopRatedRestaurants = () => {
     if (!topRatedRestaurantSelected) {
       const topRatedRestaurants = restaurantData.filter(
-        (res) => res.info.avgRating >= 4.5
+        (res) => res.avgRating >= 4.5
       );
       setFilteredRestaurantData(topRatedRestaurants);
       setTopRatedRestaurantSelected(true);
@@ -60,7 +44,7 @@ const RestaurantContainer = () => {
 
   const filterRestaurant = () => {
     const filteredRestaurants = restaurantData.filter((res) =>
-      res.info.name.toLowerCase().includes(serachQuery.toLowerCase())
+      res.name.toLowerCase().includes(serachQuery.toLowerCase())
     );
     setFilteredRestaurantData(filteredRestaurants);
   };
@@ -119,8 +103,8 @@ const RestaurantContainer = () => {
       ) : filteredRestaurantData.length ? (
         <section className="res-container-cards">
           {filteredRestaurantData.map((res) => (
-            <Link key={res.info.id} to={"/restaurant/" + res.info.id}>
-              <RestaurantCard restaurantData={res.info} />
+            <Link key={res.id} to={"/restaurant/" + res.id}>
+              <RestaurantCard restaurantData={res} />
             </Link>
           ))}
         </section>

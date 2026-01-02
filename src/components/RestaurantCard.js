@@ -1,14 +1,4 @@
 const RestaurantCard = ({ restaurantData }) => {
-  // const {
-  //   name,
-  //   image_url,
-  //   rating,
-  //   amountForOne,
-  //   cuisines,
-  //   deliveryTime,
-  //   discount,
-  // } = restaurantData.basicDetails;
-
   const resInfo = {
     name: restaurantData.name ? restaurantData.name : "",
     image_url: restaurantData.cloudinaryImageId
@@ -18,15 +8,14 @@ const RestaurantCard = ({ restaurantData }) => {
     rating: restaurantData.avgRatingString
       ? restaurantData.avgRatingString
       : "",
-    amountForOne: restaurantData.costForTwo ? restaurantData.costForTwo : "",
+    amountForTwo: restaurantData.costForTwo ? restaurantData.costForTwo : "",
     cuisines: restaurantData.cuisines.length ? restaurantData.cuisines : [],
-    deliveryTime: restaurantData.sla?.slaString
-      ? restaurantData.sla?.slaString
+    deliveryTime: restaurantData.deliveryTime
+      ? restaurantData.deliveryTime
       : "",
-    discount: restaurantData.aggregatedDiscountInfoV3?.subHeader
-      ? restaurantData.aggregatedDiscountInfoV3?.subHeader
-      : "",
+    discount: restaurantData.discountInfo ? restaurantData.discountInfo : "",
   };
+
   return (
     <div className="res-card">
       <img alt={resInfo.name} src={resInfo.image_url}></img>
@@ -40,7 +29,7 @@ const RestaurantCard = ({ restaurantData }) => {
         <p className="res-cuisines" data-fulltext={resInfo.cuisines.join(", ")}>
           {resInfo.cuisines.join(", ")}
         </p>
-        <p className="res-amountforOne">{resInfo.amountForOne}</p>
+        <p className="res-amountforTwo">{resInfo.amountForTwo}</p>
       </div>
       <div className="res-discount-deliveryTime">
         <p className="res-discount">{resInfo.discount}</p>

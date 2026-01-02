@@ -123,7 +123,3 @@ export const FoodBrandImages = [
     deliveryTime: "20 min",
   },
 ];
-
-export const RestaurantListData = [];
-
-export const RestaurantData = [];
