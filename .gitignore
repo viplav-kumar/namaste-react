@@ -3,3 +3,5 @@
 .parcel-cache
 .env
 src/db/
+todo.md
+react_notes.md
