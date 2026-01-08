@@ -27,29 +27,12 @@ The project simulates a real-world food ordering experience using **mock data** 
 
 ## 📁 Project Structure
 
-public/
-└─ images/
-├─ app-download/
-├─ banners/
-├─ carousels/
-├─ food-type/
-└─ outlets/
-└─ icons/
-└─ social/
-├─ logos/
-└─ placeholders/
-
-src/
+```text
+public/     # static assets
+src/        # application source
 ├─ components/
 ├─ utils/
-│ ├─ foodTypeAndOutletData.js
 └─ App.js
-
-index.css
-index.html
-package-lock.json
-package.json
-README.md
 
 ---
 
@@ -57,7 +40,7 @@ README.md
 
 This project uses **locally created mock data** for development and UI testing.
 
-> ⚠️ Note: Mock API files are intentionally excluded from the repository to avoid committing large or sensitive data.  
+> ⚠️ Note: Mock API files are intentionally excluded from the repository to avoid committing large or sensitive data.
 > You can create your own mock data structure based on the UI needs.
 
 ---
@@ -127,3 +110,4 @@ GitHub: https://github.com/viplav-kumar
 ---
 
 ⭐ If you like this project, consider giving it a star!
+```
