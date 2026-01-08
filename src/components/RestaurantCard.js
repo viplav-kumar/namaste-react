@@ -2,8 +2,7 @@ const RestaurantCard = ({ restaurantData }) => {
   const resInfo = {
     name: restaurantData.name ? restaurantData.name : "",
     image_url: restaurantData.cloudinaryImageId
-      ? "https://media-assets.swiggy.com/swiggy/image/upload/" +
-        restaurantData.cloudinaryImageId
+      ? restaurantData.cloudinaryImageId
       : "",
     rating: restaurantData.avgRatingString
       ? restaurantData.avgRatingString

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-const ImageCascader = ({ images, cascaderTitle }) => {
+const ImageCarousel = ({ images, title }) => {
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -14,7 +14,7 @@ const ImageCascader = ({ images, cascaderTitle }) => {
 
   return (
     <div>
-      <h3 className="FoodTypeChooserMsg">{cascaderTitle}</h3>
+      <h3 className="FoodTypeChooserMsg">{title}</h3>
       <div className="carousel-container">
         <button className="scroll-btn left" onClick={() => scroll("left")}>
           &#8592;
@@ -42,4 +42,4 @@ const ImageCascader = ({ images, cascaderTitle }) => {
   );
 };
 
-export default ImageCascader;
+export default ImageCarousel;

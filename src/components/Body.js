@@ -1,18 +1,18 @@
-import ImageCascader from "./ImageCascader";
-import { FoodTypeImages } from "../utils/mockData";
-import { FoodBrandImages } from "../utils/mockData";
+import ImageCarousel from "./ImageCarousel";
+import { FoodTypeImages } from "../utils/foodTypeAndOutletData";
+import { FoodOutletImages } from "../utils/foodTypeAndOutletData";
 import RestaurantContainer from "./RestaurantContainer";
 // import UserContainerClass from "./UserContainerClass";
 
 const Body = () => {
   return (
     <main className="body">
-      <ImageCascader
+      <ImageCarousel
         images={FoodTypeImages}
         cascaderTitle="Inspiration for your first order"
       />
-      <ImageCascader
-        images={FoodBrandImages}
+      <ImageCarousel
+        images={FoodOutletImages}
         cascaderTitle="Top brands for you"
       />
       <RestaurantContainer />

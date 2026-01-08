@@ -5,7 +5,7 @@ const MyFooter = () => {
   return (
     <footer className="footer">
       <div className="footerAppLogo">
-        <AppLogo src="../../images/AppLogo.png" />
+        <AppLogo src="../../images/app-logo-images/AppLogo.png" />
         <p>&copy;&nbsp;2025 Zingry Limited</p>
       </div>
 
@@ -83,38 +83,59 @@ const MyFooter = () => {
         <ul>
           <li>
             <a>
-              <img alt="LinkedIn-Image" src="../../images/LinkedIn.png"></img>
+              <img
+                alt="LinkedIn-Image"
+                src="../../images/social-media-links-images/LinkedIn.png"
+              ></img>
             </a>
           </li>
           <li>
             <a>
-              <img alt="Instagram-Image" src="../../images/Instagram.png"></img>
+              <img
+                alt="Instagram-Image"
+                src="../../images/social-media-links-images/Instagram.png"
+              ></img>
             </a>
           </li>
           <li>
             <a>
-              <img alt="X-Twitter-Image" src="../../images/X-Twitter.png"></img>
+              <img
+                alt="X-Twitter-Image"
+                src="../../images/social-media-links-images/X-Twitter.png"
+              ></img>
             </a>
           </li>
           <li>
             <a>
-              <img alt="YouTube-Image" src="../../images/YouTube.png"></img>
+              <img
+                alt="YouTube-Image"
+                src="../../images/social-media-links-images/YouTube.png"
+              ></img>
             </a>
           </li>
           <li>
             <a>
-              <img alt="Facebook-Image" src="../../images/Facebook.png"></img>
+              <img
+                alt="Facebook-Image"
+                src="../../images/social-media-links-images/Facebook.png"
+              ></img>
             </a>
           </li>
         </ul>
         <div className="apple-download">
           <a>
-            <img alt="Apple Store" src="../../images/AppleDownload.png"></img>
+            <img
+              alt="Apple Store"
+              src="../../images/app-download-links-images/AppleDownload.png"
+            ></img>
           </a>
         </div>
         <div className="google-download">
           <a>
-            <img alt="Google Store" src="../../images/GoogleDownload.png"></img>
+            <img
+              alt="Google Store"
+              src="../../images/app-download-links-images/GoogleDownload.png"
+            ></img>
           </a>
         </div>
       </section>

@@ -17,7 +17,7 @@ const MyHeader = () => {
   };
   return (
     <header className="header">
-      <AppLogo src="../../images/AppLogo.png" />
+      <AppLogo src="../../images/app-logo-images/AppLogo.png" />
       <HeaderSearchBar />
       <div className="cartImage">
         <img alt="App Cart Image" src={SHOPPING_CART_IMAGE}></img>
