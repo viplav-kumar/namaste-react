@@ -1,62 +1,62 @@
 export const FoodTypeImages = [
   {
-    src: "/images/food-type-carousel-images/pizza.png",
+    src: "/images/carousels/food-type/pizza.png",
     label: "Pizza",
   },
   {
-    src: "/images/food-type-carousel-images/burger.png",
+    src: "/images/carousels/food-type/burger.png",
     label: "Burger",
   },
   {
-    src: "/images/food-type-carousel-images/subs.png",
+    src: "/images/carousels/food-type/subs.png",
     label: "Subs",
   },
   {
-    src: "/images/food-type-carousel-images/wraps.png",
+    src: "/images/carousels/food-type/wraps.png",
     label: "Wraps",
   },
   {
-    src: "/images/food-type-carousel-images/noodles.png",
+    src: "/images/carousels/food-type/noodles.png",
     label: "Noodles",
   },
   {
-    src: "/images/food-type-carousel-images/pav-bhaji.jpg",
+    src: "/images/carousels/food-type/pav-bhaji.jpg",
     label: "Pav Bhaji",
   },
   {
-    src: "/images/food-type-carousel-images/cold-coffee.png",
+    src: "/images/carousels/food-type/cold-coffee.png",
     label: "Coffee",
   },
   {
-    src: "/images/food-type-carousel-images/cake.png",
+    src: "/images/carousels/food-type/cake.png",
     label: "Cake",
   },
   {
-    src: "/images/food-type-carousel-images/waffle.png",
+    src: "/images/carousels/food-type/waffle.png",
     label: "Waffles",
   },
   {
-    src: "/images/food-type-carousel-images/ice-cream.png",
+    src: "/images/carousels/food-type/ice-cream.png",
     label: "Waffles",
   },
   {
-    src: "/images/food-type-carousel-images/dosa.png",
+    src: "/images/carousels/food-type/dosa.png",
     label: "Dosa",
   },
   {
-    src: "/images/food-type-carousel-images/parantha.png",
+    src: "/images/carousels/food-type/parantha.png",
     label: "Parantha",
   },
   {
-    src: "/images/food-type-carousel-images/thali.png",
+    src: "/images/carousels/food-type/thali.png",
     label: "North Indian",
   },
   {
-    src: "/images/food-type-carousel-images/biryani.png",
+    src: "/images/carousels/food-type/biryani.png",
     label: "Biryani",
   },
   {
-    src: "/images/food-type-carousel-images/salad.png",
+    src: "/images/carousels/food-type/salad.png",
     label: "Salad",
   },
 ];
@@ -64,62 +64,62 @@ export const FoodTypeImages = [
 export const FoodOutletImages = [
   {
     label: "McDonald's",
-    src: "/images/food-outlet-carousel-images/mcdonalds.png",
+    src: "/images/carousels/outlets/mcdonalds.png",
   },
   {
     label: "Domino's Pizza",
-    src: "/images/food-outlet-carousel-images/dominos.png",
+    src: "/images/carousels/outlets/dominos.png",
   },
   {
     label: "Burger King",
-    src: "/images/food-outlet-carousel-images/burger-king.png",
+    src: "/images/carousels/outlets/burger-king.png",
   },
   {
     label: "Pizza Hut",
-    src: "/images/food-outlet-carousel-images/pizza-hut.png",
+    src: "/images/carousels/outlets/pizza-hut.png",
   },
   {
     label: "KFC",
-    src: "/images/food-outlet-carousel-images/kfc.png",
+    src: "/images/carousels/outlets/kfc.png",
   },
   {
     label: "Faasos",
-    src: "/images/food-outlet-carousel-images/faasos.png",
+    src: "/images/carousels/outlets/faasos.png",
   },
   {
     label: "Subway",
-    src: "/images/food-outlet-carousel-images/subway.png",
+    src: "/images/carousels/outlets/subway.png",
   },
   {
     label: "Chinese Wok",
-    src: "/images/food-outlet-carousel-images/chinese-wok.png",
+    src: "/images/carousels/outlets/chinese-wok.png",
   },
   {
     label: "Blue Tokai",
-    src: "/images/food-outlet-carousel-images/blue-tokai.png",
+    src: "/images/carousels/outlets/blue-tokai.png",
   },
   {
     label: "Tim Hortons",
-    src: "/images/food-outlet-carousel-images/tim-hortons.png",
+    src: "/images/carousels/outlets/tim-hortons.png",
   },
   {
     label: "Theobroma",
-    src: "/images/food-outlet-carousel-images/theobroma.png",
+    src: "/images/carousels/outlets/theobroma.png",
   },
   {
     label: "Meridian Ice-cream",
-    src: "/images/food-outlet-carousel-images/meridian-icecream.png",
+    src: "/images/carousels/outlets/meridian-icecream.png",
   },
   {
     label: "Belgian Waffle",
-    src: "/images/food-outlet-carousel-images/belgian-waffle.png",
+    src: "/images/carousels/outlets/belgian-waffle.png",
   },
   {
     label: "Behrouz Biryani",
-    src: "/images/food-outlet-carousel-images/behrouz-biryani.png",
+    src: "/images/carousels/outlets/behrouz-biryani.png",
   },
   {
     label: "Harvest Salad",
-    src: "/images/food-outlet-carousel-images/harvest-salad.png",
+    src: "/images/carousels/outlets/harvest-salad.png",
   },
 ];

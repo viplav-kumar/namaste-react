@@ -5,7 +5,7 @@ const MyFooter = () => {
   return (
     <footer className="footer">
       <div className="footerAppLogo">
-        <AppLogo src="../../images/app-logo-images/AppLogo.png" />
+        <AppLogo src="../../images/logos/app.png" />
         <p>&copy;&nbsp;2025 Zingry Limited</p>
       </div>
 
@@ -85,7 +85,7 @@ const MyFooter = () => {
             <a>
               <img
                 alt="LinkedIn-Image"
-                src="../../images/social-media-links-images/LinkedIn.png"
+                src="../../images/icons/social/linkedin.png"
               ></img>
             </a>
           </li>
@@ -93,23 +93,20 @@ const MyFooter = () => {
             <a>
               <img
                 alt="Instagram-Image"
-                src="../../images/social-media-links-images/Instagram.png"
+                src="../../images/icons/social/instagram.png"
               ></img>
             </a>
           </li>
           <li>
             <a>
-              <img
-                alt="X-Twitter-Image"
-                src="../../images/social-media-links-images/X-Twitter.png"
-              ></img>
+              <img alt="X-Image" src="../../images/icons/social/x.png"></img>
             </a>
           </li>
           <li>
             <a>
               <img
                 alt="YouTube-Image"
-                src="../../images/social-media-links-images/YouTube.png"
+                src="../../images/icons/social/youtube.png"
               ></img>
             </a>
           </li>
@@ -117,7 +114,7 @@ const MyFooter = () => {
             <a>
               <img
                 alt="Facebook-Image"
-                src="../../images/social-media-links-images/Facebook.png"
+                src="../../images/icons/social/facebook.png"
               ></img>
             </a>
           </li>
@@ -126,7 +123,7 @@ const MyFooter = () => {
           <a>
             <img
               alt="Apple Store"
-              src="../../images/app-download-links-images/AppleDownload.png"
+              src="../../images/app-download/apple.png"
             ></img>
           </a>
         </div>
@@ -134,7 +131,7 @@ const MyFooter = () => {
           <a>
             <img
               alt="Google Store"
-              src="../../images/app-download-links-images/GoogleDownload.png"
+              src="../../images/app-download/google.png"
             ></img>
           </a>
         </div>
