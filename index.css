@@ -160,7 +160,7 @@
 }
 
 /* Title */
-.FoodTypeChooserMsg {
+.carouselTitle {
   font-size: 1.8rem;
   font-weight: 600;
   color: #222;
@@ -207,6 +207,11 @@
 
 .image-item:hover {
   transform: translateY(-4px) scale(1.05);
+}
+
+.image-item > a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .carousel-image {

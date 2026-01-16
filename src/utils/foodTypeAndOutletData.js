@@ -63,62 +63,77 @@ export const FoodTypeImages = [
 
 export const FoodOutletImages = [
   {
+    id: "242282",
     label: "McDonald's",
     src: "/images/carousels/outlets/mcdonalds.png",
   },
   {
+    id: "24207",
     label: "Domino's Pizza",
     src: "/images/carousels/outlets/dominos.png",
   },
   {
+    id: "8614",
     label: "Burger King",
     src: "/images/carousels/outlets/burger-king.png",
   },
   {
+    id: "16865",
     label: "Pizza Hut",
     src: "/images/carousels/outlets/pizza-hut.png",
   },
   {
+    id: "26719",
     label: "KFC",
     src: "/images/carousels/outlets/kfc.png",
   },
   {
+    id: "25823",
     label: "Faasos",
     src: "/images/carousels/outlets/faasos.png",
   },
   {
+    id: "16418",
     label: "Subway",
     src: "/images/carousels/outlets/subway.png",
   },
   {
+    id: "394991",
     label: "Chinese Wok",
     src: "/images/carousels/outlets/chinese-wok.png",
   },
   {
+    id: "342669",
     label: "Blue Tokai",
     src: "/images/carousels/outlets/blue-tokai.png",
   },
   {
+    id: "1019760",
     label: "Tim Hortons",
     src: "/images/carousels/outlets/tim-hortons.png",
   },
   {
+    id: "58217",
     label: "Theobroma",
     src: "/images/carousels/outlets/theobroma.png",
   },
   {
+    id: "844772",
     label: "Meridian Ice-cream",
     src: "/images/carousels/outlets/meridian-icecream.png",
   },
   {
+    id: "753312",
     label: "Belgian Waffle",
     src: "/images/carousels/outlets/belgian-waffle.png",
   },
   {
+    id: "17835",
     label: "Behrouz Biryani",
     src: "/images/carousels/outlets/behrouz-biryani.png",
   },
   {
+    id: "1081456",
     label: "Harvest Salad",
     src: "/images/carousels/outlets/harvest-salad.png",
   },

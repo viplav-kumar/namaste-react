@@ -1,53 +1,18 @@
 import RestaurantCard from "./RestaurantCard";
 import RestaurantCardShimmer from "./RestaurantCardShimmer";
-import { useState, useEffect } from "react";
+import useRestaurantsData from "../utils/useRestaurantsData";
 import { Link } from "react-router-dom";
 
 const RestaurantContainer = () => {
-  const [restaurantData, setRestaurantData] = useState([]);
-  const [filteredRestaurantData, setFilteredRestaurantData] = useState([]);
-  const [topRatedRestaurantSelected, setTopRatedRestaurantSelected] =
-    useState(false);
-  const [serachQuery, setSerachQuery] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
-
-  const restaurantListAPI = process.env.RESTAURANT_LIST_API;
-  useEffect(() => {
-    fetchRestaurantData();
-  }, []);
-
-  const fetchRestaurantData = async () => {
-    try {
-      const response = await fetch(restaurantListAPI);
-      const restaurantInfo = await response.json();
-      setRestaurantData(restaurantInfo);
-      setFilteredRestaurantData(restaurantInfo);
-    } catch (error) {
-      console.log(error || "Something went wrong.");
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const getTopRatedRestaurants = () => {
-    if (!topRatedRestaurantSelected) {
-      const topRatedRestaurants = restaurantData.filter(
-        (res) => res.avgRating >= 4.5
-      );
-      setFilteredRestaurantData(topRatedRestaurants);
-      setTopRatedRestaurantSelected(true);
-    } else {
-      fetchRestaurantData();
-      setTopRatedRestaurantSelected(false);
-    }
-  };
-
-  const filterRestaurant = () => {
-    const filteredRestaurants = restaurantData.filter((res) =>
-      res.name.toLowerCase().includes(serachQuery.toLowerCase())
-    );
-    setFilteredRestaurantData(filteredRestaurants);
-  };
+  const [
+    filteredRestaurantData,
+    searchQuery,
+    setSearchQuery,
+    isLoading,
+    topRatedRestaurantSelected,
+    getTopRatedRestaurants,
+    filterRestaurant,
+  ] = useRestaurantsData();
 
   return (
     <div className="res-container">
@@ -58,9 +23,9 @@ const RestaurantContainer = () => {
             type="text"
             className="search-food-restaurants-input"
             placeholder="Search for restaurants and food"
-            value={serachQuery}
+            value={searchQuery}
             onChange={(e) => {
-              setSerachQuery(e.target.value);
+              setSearchQuery(e.target.value);
               console.log(e.target.value);
             }}
             onKeyDown={(e) => {

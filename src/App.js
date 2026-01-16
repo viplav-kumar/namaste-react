@@ -6,12 +6,14 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantPage from "./components/RestaurantPage";
+import ScrollToTop from "./utils/ScrollToTop";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 const AppLayout = () => {
   return (
     <div className="res-app">
       <MyHeader />
+      <ScrollToTop />
       <Outlet />
       <MyFooter />
     </div>

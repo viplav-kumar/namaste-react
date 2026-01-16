@@ -9,12 +9,9 @@ const Body = () => {
     <main className="body">
       <ImageCarousel
         images={FoodTypeImages}
-        cascaderTitle="Inspiration for your first order"
+        title="Inspiration for your first order"
       />
-      <ImageCarousel
-        images={FoodOutletImages}
-        cascaderTitle="Top brands for you"
-      />
+      <ImageCarousel images={FoodOutletImages} title="Top brands for you" />
       <RestaurantContainer />
       {/* <UserContainerClass /> */}
     </main>

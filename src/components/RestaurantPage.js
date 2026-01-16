@@ -1,29 +1,10 @@
-import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import useRestaurantDetails from "../utils/useRestaurantDetails";
 import RestaurantPageShimmer from "./RestaurantPageShimmer";
 
 const RestaurantPage = () => {
-  const [restaurantInfo, setRestaurantInfo] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
   const { resId } = useParams();
-  const restaurantAPI = process.env.RESTAURANT_LIST_API;
-
-  useEffect(() => {
-    fetchRestaurantData();
-  }, []);
-
-  const fetchRestaurantData = async () => {
-    try {
-      const data = await fetch(restaurantAPI + "/" + resId);
-      const restaurantData = await data.json();
-      setRestaurantInfo(restaurantData);
-    } catch (error) {
-      console.log(error || "Something went wrong");
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
+  const [isLoading, restaurantInfo] = useRestaurantDetails(resId);
   return isLoading ? (
     <RestaurantPageShimmer />
   ) : (
