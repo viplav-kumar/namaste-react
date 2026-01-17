@@ -5,7 +5,7 @@ import MyFooter from "./components/MyFooter";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
-import RestaurantPage from "./components/RestaurantPage";
+import RestaurantPage from "./components/restaurant/RestaurantPage";
 import ScrollToTop from "./utils/ScrollToTop";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 

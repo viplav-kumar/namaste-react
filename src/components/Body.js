@@ -1,7 +1,7 @@
 import ImageCarousel from "./ImageCarousel";
 import { FoodTypeImages } from "../utils/foodTypeAndOutletData";
 import { FoodOutletImages } from "../utils/foodTypeAndOutletData";
-import RestaurantContainer from "./RestaurantContainer";
+import RestaurantContainer from "./restaurant/RestaurantContainer";
 // import UserContainerClass from "./UserContainerClass";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import OfflinePage from "./Offlinepage";

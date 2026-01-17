@@ -1,6 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import RestaurantCardShimmer from "./RestaurantCardShimmer";
-import useRestaurantsData from "../utils/useRestaurantsData";
+import useRestaurantsData from "../../utils/useRestaurantsData";
 import { Link } from "react-router-dom";
 
 const RestaurantContainer = () => {

@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import useRestaurantDetails from "../utils/useRestaurantDetails";
+import useRestaurantDetails from "../../utils/useRestaurantDetails";
 import RestaurantPageShimmer from "./RestaurantPageShimmer";
 
 const RestaurantPage = () => {
