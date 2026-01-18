@@ -6,10 +6,12 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantPage from "./components/restaurant/RestaurantPage";
-import Grocery from "./components/grocery/Grocery";
+import GroceryMartShimmer from "./components/grocery/GroceryMartShimmer";
+import { lazy, Suspense } from "react";
 import ScrollToTop from "./utils/ScrollToTop";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
+const Grocery = lazy(() => import("./components/grocery/Grocery"));
 const AppLayout = () => {
   return (
     <div className="res-app">
@@ -40,7 +42,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/grocery",
-        element: <Grocery />,
+        element: (
+          <Suspense fallback={<GroceryMartShimmer />}>
+            <Grocery />
+          </Suspense>
+        ),
       },
       {
         path: "/restaurant/:resId",
