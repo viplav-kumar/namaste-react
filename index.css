@@ -1,101 +1,10 @@
-.res-app {
+@import "tailwindcss";
+
+/* .res-app {
   height: 100%;
   width: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding-top: 60px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-evenly;
-  border-bottom: 1px solid lightgrey;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  background-color: white;
-  z-index: 1000;
-  padding-top: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 100%;
-}
-
-.appLogo > a {
-  display: flex;
-  text-decoration: none;
-  color: inherit;
-}
-
-.appLogo:hover {
-  cursor: pointer;
-}
-
-.appLogo > a > img {
-  height: 60px;
-  border-radius: 50%;
-}
-
-.appLogo > a > h3 {
-  padding-left: 3px;
-  font-size: x-large;
-  font-family: cursive;
-  margin-top: 15px;
-}
-
-.header > .groceryImage,
-.header > .cartImage,
-.header > .profileImage {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.header > .cartImage,
-.header > .profileImage {
-  margin-top: 14px;
-}
-
-.header > .profileImage {
-  margin-top: 16px;
-}
-
-.header > .profileImage > .login-logout-text,
-.header > .groceryImage > p,
-.header > .cartImage > p {
-  margin: -15px;
-  font-size: 14px;
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  cursor: pointer;
-}
-
-.header > .groceryImage {
-  text-decoration: none;
-  color: inherit;
-}
-
-.groceryImage:hover,
-.cartImage:hover,
-.profileImage:hover {
-  cursor: pointer;
-}
-
-.groceryImage > img {
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  margin-bottom: 5px;
-}
-
-.cartImage > img,
-.profileImage > img {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  margin-bottom: 12px;
-}
-
-.profileImage > img {
-  margin-bottom: 9px;
 }
 
 .groceryMartHeaderTitle {
@@ -114,35 +23,9 @@
   text-align: center;
 }
 
-.navigationMenuItems {
-  display: flex;
-  justify-content: space-between;
-}
-
-.navigationMenuItems > .userLocation,
-.navigationMenuItems > .searchRestaurant {
-  padding: 15px;
-}
-
-.userLocation > input,
-.searchRestaurant > input {
-  height: 40px;
-  width: 250px;
-  border-radius: 8px;
-  padding-left: 35px;
-  font-family: system-ui;
-  font-size: medium;
-  background-image: url("https://endlessicons.com/wp-content/uploads/2015/08/search-icon-2-614x460.png");
-  background-repeat: no-repeat;
-  background-size: 35px 30px;
-  background-position: 0px center;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
 .body {
   margin: 20px 100px;
-}
+} */
 
 .welcomeComponent {
   position: relative;

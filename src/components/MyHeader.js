@@ -12,23 +12,44 @@ const MyHeader = () => {
       : setLoginLogoutText("Login");
   };
   return (
-    <header className="header">
+    <header className="flex justify-evenly top-0 bg-white z-1000 pt-2 w-full fixed shadow-lg">
       <AppLogo src="../../images/logos/app.png" />
       <HeaderSearchBar />
-      <Link className="groceryImage" to="/grocery">
-        <img alt="Grocery Image" src="../../images/icons/grocery.jpg"></img>
-        <p>Grocery</p>
+      <Link
+        className="flex flex-col text-center mt-[10] hover:cursor-pointer"
+        to="/grocery"
+      >
+        <img
+          className="h-[40] w-[40] rounded mb-[5]"
+          alt="Grocery Image"
+          src="../../images/icons/grocery.jpg"
+        ></img>
+        <p className="m-[-15] text-sm font-['Segoe UI', Tahoma, sans-serif]">
+          Grocery
+        </p>
       </Link>
-      <div className="cartImage">
-        <img alt="App Cart Image" src="../../images/icons/cart.png"></img>
-        <p>My Cart</p>
+      <div className="flex flex-col text-center mt-[14] hover:cursor-pointer">
+        <img
+          className="h-[30] w-[30] rounded mb-[12]"
+          alt="App Cart Image"
+          src="../../images/icons/cart.png"
+        ></img>
+        <p className="m-[-15] text-sm font-['Segoe UI', Tahoma, sans-serif]">
+          My Cart
+        </p>
       </div>
       <div
-        className="profileImage"
+        className="flex flex-col text-center mt-[16] hover:cursor-pointer"
         onClick={() => handleLoginLogoutOperation()}
       >
-        <img alt="App Profile Image" src="../../images/icons/profile.jpg"></img>
-        <p className="login-logout-text">{loginLogoutText}</p>
+        <img
+          className="h-[30] w-[30] rounded mb-[12]"
+          alt="App Profile Image"
+          src="../../images/icons/profile.jpg"
+        ></img>
+        <p className="m-[-15] text-sm font-['Segoe UI', Tahoma, sans-serif] mb-[9]">
+          {loginLogoutText}
+        </p>
       </div>
     </header>
   );
