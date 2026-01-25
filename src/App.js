@@ -14,7 +14,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 const Grocery = lazy(() => import("./components/grocery/Grocery"));
 const AppLayout = () => {
   return (
-    <div className="res-app">
+    <div className="h-full w-full font-(family-name: Segoe UI, Tahoma, Geneva, Verdana, sans-serif) pt-17">
       <MyHeader />
       <ScrollToTop />
       <Outlet />
