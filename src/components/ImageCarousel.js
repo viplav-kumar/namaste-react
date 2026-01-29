@@ -40,7 +40,7 @@ const ImageCarousel = ({ images, title }) => {
                   <img
                     src={item.src}
                     alt={item.label}
-                    className="w-30 h-25 rounded-full object-cover border-solid border-2 border-[#f1f1f1] shadow-[0 2px 10px rgba(0, 0, 0, 0.08)] transition-shadow transition-colors duration-300 ease-in-out hover:shadow-[0 4px 16px rgba(0, 0, 0, 0.15)] hover:border-[#ff9800]"
+                    className="w-30 h-25 rounded-full object-cover border-solid border-2 border-[#f1f1f1] shadow-[0_2px_10px_rgba(0_0_0_0.08)] transition-shadow transition-colors duration-300 ease-in-out hover:shadow-[0_4px_16px_rgba(0_0_0_0.15)] hover:border-[#ff9800]"
                   />
                   <div className="mt-2.5 text-base font-medium text-[#333] text-center tracking-[0.2px]">
                     {item.label}
@@ -51,7 +51,7 @@ const ImageCarousel = ({ images, title }) => {
                   <img
                     src={item.src}
                     alt={item.label}
-                    className="w-30 h-25 rounded-full object-cover border-solid border-2 border-[#f1f1f1] shadow-[0 2px 10px rgba(0, 0, 0, 0.08)] transition-shadow transition-colors duration-300 ease-in-out hover:shadow-[0 4px 16px rgba(0, 0, 0, 0.15)] hover:border-[#ff9800]"
+                    className="w-30 h-25 rounded-full object-cover border-solid border-2 border-[#f1f1f1] shadow-[0_2px_10px_rgba(0_0_0_0.08)] transition-shadow transition-colors duration-300 ease-in-out hover:shadow-[0_4px_16px_rgba(0_0_0_0.15)] hover:border-[#ff9800]"
                   />
                   <div className="mt-2.5 text-base font-medium text-[#333] text-center tracking-[0.2px]">
                     {item.label}

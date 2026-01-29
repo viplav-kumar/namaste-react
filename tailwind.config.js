@@ -13,9 +13,15 @@ export default {
             transform: "translateY(0)",
           },
         },
+        shimmer: {
+          "100%": {
+            left: "100%",
+          },
+        },
       },
       animation: {
         fadeIn: "fadeIn 0.4s ease",
+        shimmer: "shimmer 1.6s infinite",
       },
     },
   },
