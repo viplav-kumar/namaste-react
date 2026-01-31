@@ -18,10 +18,15 @@ export default {
             left: "100%",
           },
         },
+        shimmerLoading: {
+          "0%": { backgroundPosition: "100% 0" },
+          "100%": { backgroundPosition: "-100% 0" },
+        },
       },
       animation: {
         fadeIn: "fadeIn 0.4s ease",
         shimmer: "shimmer 1.6s infinite",
+        shimmerLoading: "shimmer-loading 1.6s ease-in-out infinite",
       },
     },
   },
