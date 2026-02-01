@@ -13,20 +13,22 @@ export default {
             transform: "translateY(0)",
           },
         },
+
         shimmer: {
-          "100%": {
-            left: "100%",
-          },
+          "0%": { left: "-100%" },
+          "100%": { left: "100%" },
         },
+
         shimmerLoading: {
           "0%": { backgroundPosition: "100% 0" },
           "100%": { backgroundPosition: "-100% 0" },
         },
       },
+
       animation: {
-        fadeIn: "fadeIn 0.4s ease",
+        fadeIn: "fadeIn 0.4s ease forwards",
         shimmer: "shimmer 1.6s infinite",
-        shimmerLoading: "shimmer-loading 1.6s ease-in-out infinite",
+        shimmerLoading: "shimmerLoading 1.6s ease-in-out infinite",
       },
     },
   },
