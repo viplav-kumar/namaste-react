@@ -24,7 +24,7 @@ const MyHeader = () => {
           alt="Grocery Image"
           src="../../images/icons/grocery.jpg"
         ></img>
-        <p className="m-[-15] text-sm font-['Segoe UI', Tahoma, sans-serif]">
+        <p className="m-[-15] text-sm font-['Segoe_UI'_Tahoma_sans-serif]">
           Grocery
         </p>
       </Link>
@@ -34,7 +34,7 @@ const MyHeader = () => {
           alt="App Cart Image"
           src="../../images/icons/cart.png"
         ></img>
-        <p className="m-[-15] text-sm font-['Segoe UI', Tahoma, sans-serif]">
+        <p className="m-[-15] text-sm font-['Segoe_UI'_Tahoma_sans-serif]">
           My Cart
         </p>
       </div>
@@ -47,7 +47,7 @@ const MyHeader = () => {
           alt="App Profile Image"
           src="../../images/icons/profile.jpg"
         ></img>
-        <p className="m-[-15] text-sm font-['Segoe UI', Tahoma, sans-serif] mb-[9]">
+        <p className="m-[-15] text-sm font-['Segoe_UI'_Tahoma_sans-serif] mb-[9]">
           {loginLogoutText}
         </p>
       </div>

@@ -13,10 +13,13 @@ const RestaurantCard = ({ restaurantData }) => {
       ? restaurantData.deliveryTime
       : "",
     discount: restaurantData.discountInfo ? restaurantData.discountInfo : "",
+    promoted: restaurantData.promoted,
   };
 
   return (
-    <div className="w-75 bg-gray-100 rounded-xl shadow-[0_4px_10px_rgba(0_0_0_0.08)] overflow-hidden flex flex-col cursor-pointer transition-transform transition-shadow duration-200 ease-in-out hover:shadow-[0_6px_16px_rgba(0_0_0_0.12)] hover:-translate-y-0.75">
+    <div
+      className={`w-75 bg-gray-100 rounded-xl shadow-[0_4px_10px_rgba(0_0_0_0.08)] overflow-hidden flex flex-col cursor-pointer transition-transform transition-shadow duration-200 ease-in-out hover:shadow-[0_6px_16px_rgba(0_0_0_0.12)] hover:-translate-y-0.75 ${resInfo.promoted ? `group-hover:shadow-[0_6px_16px_rgba(0_0_0_0.12)] group-hover:-translate-y-0.75` : ""}`}
+    >
       <img
         className="w-full h-full object-contain"
         alt={resInfo.name}
@@ -51,6 +54,19 @@ const RestaurantCard = ({ restaurantData }) => {
       </div>
     </div>
   );
+};
+
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div className="relative group">
+        <label className="absolute bg-gray-800 p-0.5 text-[12px] text-white opacity-70 z-20 rounded-tl-lg group-hover:-translate-y-0.75 transition-transform transition-shadow duration-200 ease-in-out">
+          Promoted
+        </label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
 };
 
 export default RestaurantCard;

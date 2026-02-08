@@ -13,7 +13,7 @@ const WelcomeBanner = () => {
         logoPart2Class="absolute top-9 left-255 pl-[5px]"
         src="../../images/logos/app.png"
       />
-      <div className="absolute top-178 left-115 text-4xl font-semibold font-[Segoe UI, Tahoma, sans-serif] text-white drop-shadow-[0_0_2px_black]">
+      <div className="absolute top-178 left-115 text-4xl font-semibold font-['Segoe_UI'_Tahoma_sans-serif] text-white drop-shadow-[0_0_2px_black]">
         Hungry? Order Now
       </div>
     </div>

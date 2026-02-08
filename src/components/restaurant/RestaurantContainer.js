@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import RestaurantCardShimmer from "./RestaurantCardShimmer";
 import useRestaurantsData from "../../utils/useRestaurantsData";
 import { Link } from "react-router-dom";
@@ -13,6 +13,8 @@ const RestaurantContainer = () => {
     getTopRatedRestaurants,
     filterRestaurant,
   ] = useRestaurantsData();
+
+  const PromotedRestaurantCard = withPromotedLabel(RestaurantCard);
 
   return (
     <div className="max-w-300 my-0 mx-auto p-5 flex flex-col">
@@ -75,7 +77,11 @@ const RestaurantContainer = () => {
               key={res.id}
               to={"/restaurant/" + res.id}
             >
-              <RestaurantCard restaurantData={res} />
+              {res.promoted ? (
+                <PromotedRestaurantCard restaurantData={res} />
+              ) : (
+                <RestaurantCard restaurantData={res} />
+              )}
             </Link>
           ))}
         </section>

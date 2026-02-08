@@ -15,7 +15,7 @@ const ImageCarousel = ({ images, title }) => {
 
   return (
     <div>
-      <h3 className="text-3xl font-semibold text-[#222] border-b-2 border-[#eee] font-[Segoe UI, Tahoma, sans-serif] mb-5 pb-2.5">
+      <h3 className="text-3xl font-semibold text-[#222] border-b-2 border-[#eee] font-['Segoe_UI'_Tahoma_sans-serif] mb-5 pb-2.5">
         {title}
       </h3>
       <div className="relative flex text-center w-full max-w-270 m-[0px auto]">
