@@ -11,7 +11,7 @@ const RestaurantPage = () => {
   return isLoading ? (
     <RestaurantPageShimmer />
   ) : (
-    <div className="w-full bg-[#f9f9f9] pb-15 box-border">
+    <div className="w-full pb-15 box-border">
       {/* Header Section */}
       <RestaurantPageHeader restaurantInfo={restaurantInfo} />
       {/* Menu Section */}
