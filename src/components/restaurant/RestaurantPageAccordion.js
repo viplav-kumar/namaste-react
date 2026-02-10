@@ -1,24 +1,33 @@
 export const RestaurantPageAccordionHeader = ({
+  isOpen,
   item,
   firstDivCss,
   titleCss,
+  onClick,
 }) => {
+  if (!isOpen) return null;
   return (
     <div
-      className={`flex justify-between items-center text-center p-1 rounded-md mb-2 box-shadow-[0_6px_14px_rgba(0_0_0_0.06)] ${firstDivCss}`}
+      className={`flex justify-between items-center text-center rounded-md box-shadow-[0_6px_14px_rgba(0_0_0_0.06)] cursor-pointer ${firstDivCss}`}
+      onClick={onClick}
     >
       <h2 className={`text-[20px] font-semibold text-gray-800 ${titleCss}`}>
         {item.title}
       </h2>
-      <p>🔽</p>
+      <button>🔽</button>
     </div>
   );
 };
 
-export const RestaurantPageAccordionContent = ({ item, firstDivCss }) => {
+export const RestaurantPageAccordionContent = ({
+  isOpen,
+  item,
+  firstDivCss,
+}) => {
+  if (!isOpen) return null;
   return (
     <div
-      className={`bg-white rounded-xl p-3 flex justify-end gap-5 box-shadow-[0_6px_14px_rgba(0_0_0_0.06)] transition-all duration-300 ease-in-out hover:scale-[1.01] ${firstDivCss}`}
+      className={`bg-white rounded-xl flex justify-end gap-5 box-shadow-[0_6px_14px_rgba(0_0_0_0.06)] transition-all duration-300 ease-in-out hover:scale-[1.01] ${firstDivCss}`}
     >
       <div className="w-10/12 flex-1">
         <h3 className="m-0 text-[16px] font-semibold text-[#222]">
