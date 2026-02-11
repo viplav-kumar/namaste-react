@@ -9,10 +9,8 @@ const RestaurantPageMenu = ({ restaurantInfo }) => {
   const [openSubCategoryId, setOpenSubCategoryId] = useState(null);
 
   const handleCategoryClick = (id) => {
-    setOpenCategoryId((prev) => {
-      prev === id ? setOpenCategoryId(null) : setOpenCategoryId(id);
-      setOpenSubCategoryId(null);
-    });
+    setOpenCategoryId((prev) => (prev === id ? null : id));
+    setOpenSubCategoryId(null);
   };
 
   const handleSubCategoryClick = (id) => {
@@ -34,7 +32,10 @@ const RestaurantPageMenu = ({ restaurantInfo }) => {
           />
           {item?.itemCards?.categories?.length
             ? item?.itemCards?.categories?.map((nestedCategory) => (
-                <div key={nestedCategory.id} className="bg-gray-800 px-5">
+                <div
+                  key={nestedCategory.id}
+                  className={`bg-gray-800 px-5 ${openSubCategoryId === nestedCategory.id ? "pb-2 mb-2" : ""}`}
+                >
                   {openCategoryId === item.id && (
                     <RestaurantPageAccordionHeader
                       isOpen={openCategoryId === item.id}
