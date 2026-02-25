@@ -1,7 +1,10 @@
-import AppLogo from "./AppLogo";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/contexts/UserContext";
+import AppLogo from "./AppLogo";
 
 const MyFooter = () => {
+  const { loggedInUser } = useContext(UserContext);
   return (
     <footer className="bg-[rgb(248_248_248)] flex justify-center my-0 mx-25 p-5">
       <div className="mr-15">
@@ -12,6 +15,9 @@ const MyFooter = () => {
         />
         <p className="text-[smaller] text-[rgba(2_6_12_0.6)]">
           &copy;&nbsp;2025 Zingry Limited
+        </p>
+        <p className="my-1 text-[smaller] text-[rgba(2_6_12_0.6)]">
+          User: {loggedInUser}
         </p>
       </div>
 

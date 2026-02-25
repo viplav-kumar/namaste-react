@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import useRestaurantDetails from "../../utils/useRestaurantDetails";
-import RestaurantPageShimmer from "./RestaurantPageShimmer";
+import useRestaurantDetails from "../../utils/customHooks/useRestaurantDetails";
+import RestaurantPageFooter from "./RestaurantPageFooter";
 import RestaurantPageHeader from "./RestaurantPageHeader";
 import RestaurantPageMenu from "./RestaurantPageMenu";
-import RestaurantPageFooter from "./RestaurantPageFooter";
+import RestaurantPageShimmer from "./RestaurantPageShimmer";
 
 const RestaurantPage = () => {
   const { resId } = useParams();

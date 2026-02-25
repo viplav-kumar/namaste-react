@@ -20,9 +20,11 @@
   },
   "homepage": "https://github.com/viplav-kumar/zingry-app#readme",
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "parcel": "^2.15.4",
-    "parcel-reporter-static-files-copy": "^1.5.3",
-    "@tailwindcss/postcss": "^4.1.18"
+    "parcel-reporter-static-files-copy": "^1.5.3"
   },
   "dependencies": {
     "react": "^18.2.0",

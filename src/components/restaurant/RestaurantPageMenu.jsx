@@ -1,10 +1,12 @@
+import { useContext, useState } from "react";
+import UserContext from "../../utils/contexts/UserContext";
 import {
-  RestaurantPageAccordionHeader,
   RestaurantPageAccordionContent,
+  RestaurantPageAccordionHeader,
 } from "./RestaurantPageAccordion";
-import { useState } from "react";
 
 const RestaurantPageMenu = ({ restaurantInfo }) => {
+  const { loggedInUser } = useContext(UserContext);
   const [openCategoryId, setOpenCategoryId] = useState(null);
   const [openSubCategoryId, setOpenSubCategoryId] = useState(null);
 
@@ -18,7 +20,12 @@ const RestaurantPageMenu = ({ restaurantInfo }) => {
   };
 
   return (
-    <div className="mt-10 py-0 px-10 w-[80%] mx-auto">
+    <div className="py-0 px-10 w-[80%] mx-auto">
+      <i>
+        <h3 className="font-semibold text-[24px] my-2.5 text-center text-[#222222ab] font-['Segoe_UI'_Tahoma_sans-serif]">
+          {restaurantInfo.name} welcomes you {loggedInUser}
+        </h3>
+      </i>
       {restaurantInfo.restaurantPageDetails.category.map((item) => (
         <div
           key={item.id}

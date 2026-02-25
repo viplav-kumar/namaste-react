@@ -1,11 +1,15 @@
+import { useContext } from "react";
+import UserContext from "../utils/contexts/UserContext";
+
 const Contact = () => {
+  const { loggedInUser } = useContext(UserContext);
   return (
     <div className="font-[Inter,sans-serif] text-[#333] leading-[1.6]">
       {/* Header Section */}
       <section className="bg-[linear-gradient(to_right,#494949,#000000)] py-20 px-5 text-center text-white">
         <h1 className="text-[3rem] mb-2.5">Contact Us</h1>
         <p className="text-[1.2rem] opacity-[0.9]">
-          We are here to help you 24/7. Reach out anytime!
+          Hi {loggedInUser}, We are here to help you 24/7. Reach out anytime!
         </p>
       </section>
 

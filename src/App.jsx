@@ -1,25 +1,29 @@
+import { lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
-import MyHeader from "./components/MyHeader";
-import Body from "./components/Body";
-import MyFooter from "./components/MyFooter";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import About from "./components/About";
+import Body from "./components/Body";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
-import RestaurantPage from "./components/restaurant/RestaurantPage";
 import GroceryMartShimmer from "./components/grocery/GroceryMartShimmer";
-import { lazy, Suspense } from "react";
-import ScrollToTop from "./utils/ScrollToTop";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import MyFooter from "./components/MyFooter";
+import MyHeader from "./components/MyHeader";
+import RestaurantPage from "./components/restaurant/RestaurantPage";
+import UserContext from "./utils/contexts/UserContext";
+import ScrollToTop from "./utils/helpers/ScrollToTop";
 
 const Grocery = lazy(() => import("./components/grocery/Grocery"));
 const AppLayout = () => {
+  const [userName, setUserName] = useState("Guest");
   return (
-    <div className="h-full w-full font-(family-name: Segoe UI, Tahoma, Geneva, Verdana, sans-serif) pt-17">
-      <MyHeader />
-      <ScrollToTop />
-      <Outlet />
-      <MyFooter />
-    </div>
+    <UserContext.Provider value={{ loggedInUser: userName }}>
+      <div className="h-full w-full font-(family-name: Segoe UI, Tahoma, Geneva, Verdana, sans-serif) pt-17">
+        <MyHeader setUserName={setUserName} />
+        <ScrollToTop />
+        <Outlet />
+        <MyFooter />
+      </div>
+    </UserContext.Provider>
   );
 };
 

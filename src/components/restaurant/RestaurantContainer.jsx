@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
+import useRestaurantsData from "../../utils/customHooks/useRestaurantsData";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import RestaurantCardShimmer from "./RestaurantCardShimmer";
-import useRestaurantsData from "../../utils/useRestaurantsData";
-import { Link } from "react-router-dom";
 
 const RestaurantContainer = () => {
   const [
