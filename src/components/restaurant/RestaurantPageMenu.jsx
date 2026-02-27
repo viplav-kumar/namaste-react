@@ -23,7 +23,11 @@ const RestaurantPageMenu = ({ restaurantInfo }) => {
     <div className="py-0 px-10 w-[80%] mx-auto">
       <i>
         <h3 className="font-semibold text-[24px] my-2.5 text-center text-[#222222ab] font-['Segoe_UI'_Tahoma_sans-serif]">
-          {restaurantInfo.name} welcomes you {loggedInUser}
+          "Welcome to {restaurantInfo.name}
+          {loggedInUser === "Guest"
+            ? ""
+            : `, ${loggedInUser.trim().split(/\s+/)[0]}`}
+          !"
         </h3>
       </i>
       {restaurantInfo.restaurantPageDetails.category.map((item) => (

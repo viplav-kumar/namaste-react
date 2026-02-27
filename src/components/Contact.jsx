@@ -9,7 +9,10 @@ const Contact = () => {
       <section className="bg-[linear-gradient(to_right,#494949,#000000)] py-20 px-5 text-center text-white">
         <h1 className="text-[3rem] mb-2.5">Contact Us</h1>
         <p className="text-[1.2rem] opacity-[0.9]">
-          Hi {loggedInUser}, We are here to help you 24/7. Reach out anytime!
+          {loggedInUser === "Guest"
+            ? "Hi,"
+            : `Hi ${loggedInUser.trim().split(/\s+/)[0]},`}{" "}
+          We are here to help you 24/7. Reach out anytime!
         </p>
       </section>
 

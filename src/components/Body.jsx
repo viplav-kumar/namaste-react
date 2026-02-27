@@ -18,7 +18,11 @@ const Body = () => {
     <main className="mx-25 my-5">
       <i>
         <h3 className="font-semibold text-[24px] -mb-2.5 text-center text-[#222222ab] font-['Segoe_UI'_Tahoma_sans-serif]">
-          Zingry welcomes you {loggedInUser}
+          "Welcome to Zingry
+          {loggedInUser === "Guest"
+            ? ""
+            : `, ${loggedInUser.trim().split(/\s+/)[0]}`}
+          !"
         </h3>
       </i>
       <WelcomeBanner />
