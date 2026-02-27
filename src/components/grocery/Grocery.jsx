@@ -6,7 +6,11 @@ const Grocery = () => {
   return (
     <div className="flex flex-col justify-center items-center h-screen font-[Segoe_UI,Tahoma,sans-serif]">
       <h3>
-        Hello! {loggedInUser}, Welcome to Zingry Mart -{" "}
+        Welcome to Zingry Mart
+        {loggedInUser === "Guest"
+          ? " "
+          : `, ${loggedInUser.trim().split(/\s+/)[0]}! `}
+        -{" "}
         <i>
           <u>Get your grocery items delivered in minutes</u>.
         </i>
