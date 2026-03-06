@@ -1,3 +1,6 @@
+import { useSelector, useDispatch } from "react-redux";
+import { addItem, removeItem } from "../../store/feature-slice/cartSlice";
+
 export const RestaurantPageAccordionHeader = ({
   isOpen,
   item,
@@ -24,6 +27,20 @@ export const RestaurantPageAccordionContent = ({
   item,
   firstDivCss,
 }) => {
+  const cartItems = useSelector((store) => store.cart.items);
+  const dispatch = useDispatch();
+  const getItemCount = (id) => {
+    const item = cartItems.find((item) => item.id === id);
+    return item ? item.quantity : 0;
+  };
+  const handleAddItem = () => {
+    // dispatching an action for adding item to the cart
+    dispatch(addItem(item));
+  };
+  const handleDeleteItem = () => {
+    // dispatching an action for adding item to the cart
+    dispatch(removeItem(item.id));
+  };
   if (!isOpen) return null;
   return (
     <div
@@ -50,9 +67,26 @@ export const RestaurantPageAccordionContent = ({
           alt={item.name}
           className="w-35 h-30 rounded-xl overflow-hidden object-cover"
         />
-        <button className="-mt-3 py-1 px-3 bg-[#ff6b6b] text-white border-none rounded-lg font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#e25656]">
-          ADD +
-        </button>
+        {getItemCount(item.id) ? (
+          <button className="-mt-3 py-1 px-3 bg-[#ff6b6b] text-white border-none rounded-lg font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#e25656]">
+            {" "}
+            <span className="pr-2" onClick={handleDeleteItem}>
+              -
+            </span>
+            {getItemCount(item.id)}
+            <span className="pl-2" onClick={handleAddItem}>
+              +
+            </span>
+          </button>
+        ) : (
+          <button
+            className="-mt-3 py-1 px-3 bg-[#ff6b6b] text-white border-none rounded-lg font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#e25656]"
+            onClick={handleAddItem}
+          >
+            {" "}
+            ADD +{" "}
+          </button>
+        )}
       </div>
     </div>
   );
