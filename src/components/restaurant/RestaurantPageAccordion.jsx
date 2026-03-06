@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { addItem, removeItem } from "../../store/feature-slice/cartSlice";
+import { addItem, reduceItem } from "../../store/feature-slice/cartSlice";
 
 export const RestaurantPageAccordionHeader = ({
   isOpen,
@@ -37,9 +37,9 @@ export const RestaurantPageAccordionContent = ({
     // dispatching an action for adding item to the cart
     dispatch(addItem(item));
   };
-  const handleDeleteItem = () => {
+  const handleReduceItem = () => {
     // dispatching an action for adding item to the cart
-    dispatch(removeItem(item.id));
+    dispatch(reduceItem(item.id));
   };
   if (!isOpen) return null;
   return (
@@ -70,7 +70,7 @@ export const RestaurantPageAccordionContent = ({
         {getItemCount(item.id) ? (
           <button className="-mt-3 py-1 px-3 bg-[#ff6b6b] text-white border-none rounded-lg font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#e25656]">
             {" "}
-            <span className="pr-2" onClick={handleDeleteItem}>
+            <span className="pr-2" onClick={handleReduceItem}>
               -
             </span>
             {getItemCount(item.id)}
