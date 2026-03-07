@@ -3,6 +3,7 @@ import {
   addItem,
   reduceItem,
   removeItem,
+  clearCart,
 } from "../store/feature-slice/cartSlice";
 
 const Cart = () => {
@@ -17,6 +18,9 @@ const Cart = () => {
   const deleteItem = (id) => {
     dispatch(removeItem(id));
   };
+  const emptyCart = () => {
+    dispatch(clearCart());
+  };
   const total = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0,
@@ -29,9 +33,25 @@ const Cart = () => {
         <div
           className={` bg-white rounded-xl shadow p-6 ${cartItems.length === 0 ? "w-10/12 m-auto md:col-span-3" : "md:col-span-2"}`}
         >
-          <h2 className="text-2xl font-bold mb-6 inline-block border-blue-500 border-b-2">
-            Cart
-          </h2>
+          <div className="flex justify-between">
+            <h2 className="text-2xl font-bold mt-2 -ml-3 border-b-2 border-b-blue-600">
+              Cart
+            </h2>
+            {cartItems.length && (
+              <div
+                className="flex flex-col items-center -mt-2 mb-1 w-10 group hover:cursor-pointer"
+                onClick={emptyCart}
+              >
+                <img
+                  src="../../images/icons/clear-cart.png"
+                  alt="clear cart"
+                ></img>
+                <p className="w-20 font-semibold text-gray-500 group-hover:text-black">
+                  Clear Cart
+                </p>
+              </div>
+            )}
+          </div>
           <p className="border-b-8 border-gray-100 -mx-8"></p>
 
           {cartItems.length === 0 && (
