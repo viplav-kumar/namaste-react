@@ -47,13 +47,13 @@ const Cart = () => {
               key={item.id}
               className="flex items-center justify-between border-b py-4"
             >
-              <div>
+              <div className="w-8/12">
                 <h3 className="font-semibold text-lg">{item.name}</h3>
                 <p className="text-gray-500">₹{item.price}</p>
               </div>
 
               {/* Quantity Controls */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 w-2/12">
                 <button
                   onClick={() => decreaseQty(item.id)}
                   className="w-8 h-8 flex items-center justify-center border rounded"
@@ -64,7 +64,7 @@ const Cart = () => {
                 <span className="font-medium">{item.quantity}</span>
 
                 <button
-                  onClick={() => increaseQty(item.id)}
+                  onClick={() => increaseQty(item)}
                   className="w-8 h-8 flex items-center justify-center border rounded"
                 >
                   +
@@ -73,7 +73,7 @@ const Cart = () => {
 
               <button
                 onClick={() => deleteItem(item.id)}
-                className="text-red-500 hover:text-red-700"
+                className="text-red-500 hover:text-red-700 w-2/12"
               >
                 Remove
               </button>
