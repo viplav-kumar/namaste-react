@@ -20,9 +20,9 @@ const AppLayout = () => {
   const [userName, setUserName] = useState("Guest");
   return (
     <Provider store={appStore}>
-      <UserContext.Provider value={{ loggedInUser: userName }}>
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
         <div className="h-full w-full font-(family-name: Segoe UI, Tahoma, Geneva, Verdana, sans-serif) pt-17">
-          <MyHeader setUserName={setUserName} />
+          <MyHeader />
           <ScrollToTop />
           <Outlet />
           <MyFooter />

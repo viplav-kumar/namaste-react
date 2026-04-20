@@ -7,8 +7,8 @@ import HeaderSearchBar from "./HeaderSearchBar";
 import { useSelector } from "react-redux";
 import { cartItemsCountSelector } from "../store/feature-slice/cartSelectors";
 
-const MyHeader = ({ setUserName }) => {
-  const { loggedInUser } = useContext(UserContext);
+const MyHeader = () => {
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   const handleLoginLogoutOperation = () => {
     loggedInUser === "Guest"
@@ -63,7 +63,7 @@ const MyHeader = ({ setUserName }) => {
           </p>
         )}
       </Link>
-      <div
+      <button
         className="flex flex-col items-center w-20 mt-4 h-15.5 overflow-hidden hover:cursor-pointer"
         onClick={() => handleLoginLogoutOperation()}
       >
@@ -75,7 +75,7 @@ const MyHeader = ({ setUserName }) => {
         <p className="-m-3.75 h-5 overflow-hidden whitespace-nowrap text-ellipsis text-left text-sm font-['Segoe_UI'_Tahoma_sans-serif] mb-2.25">
           {loggedInUser === "Guest" ? "Login" : getInitials(loggedInUser)}
         </p>
-      </div>
+      </button>
     </header>
   );
 };
